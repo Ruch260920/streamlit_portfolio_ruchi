@@ -82,8 +82,10 @@ tabs = st.tabs([
     "👩‍💻 About",
     "💼 Experience",
     "🚀 Projects",
+    "🧪 Demo Lab",   # ✅ NEW TAB
     "🧠 Skills",
     "🎓 Education",
+    "🏅 Certifications",
     "📬 Contact"
 ])
 
@@ -99,8 +101,6 @@ with tabs[0]:
 
     My work focuses on **agentic AI systems**, where multiple intelligent components collaborate
     to automate decisions, insights, and workflows.
-
-    I bring a strong mix of **engineering + product thinking**, enabling scalable and business-aligned AI systems.
     """)
 
 # -------------------- EXPERIENCE --------------------
@@ -108,90 +108,110 @@ with tabs[1]:
     section_title("Professional Experience", "💼")
 
     card("e.Ray Europa GmbH", "AI Engineer / Data Product Owner", "Oct 2025 – Present | Heidelberg, Germany", [
-        "🚀 Designed analytics-ready datasets and semantic metric layers.",
-        "⚙️ Built Python + SQL ETL pipelines reducing manual work by 35%.",
+        "🚀 Designed analytics-ready datasets and semantic metric layers enabling ML workflows.",
+        "⚙️ Built Python + SQL ETL pipelines reducing manual effort by 35%.",
         "📊 Improved reporting efficiency by 20%.",
-        "🛡️ Implemented data quality monitoring reducing issues by 40%.",
-        "🤝 Defined KPIs and built scalable data products."
+        "🛡️ Implemented data quality monitoring reducing incidents by 40%.",
+        "🤝 Defined KPIs and built scalable data products.",
+        "☁️ Worked on cloud-based architectures integrating analytics pipelines."
     ])
 
     card("Omnisent AI", "Product & Analytics Intern", "Jun 2025 – Sep 2025 | Remote", [
-        "📊 Analyzed 500K+ event records for behavioral insights.",
-        "📈 Designed KPI frameworks for funnel analysis.",
-        "📊 Built Tableau dashboards reducing reporting effort by 25%."
-    ])
-
-    card("HDFC Bank", "Deputy Manager — Data Analytics", "Jul 2022 – Oct 2023 | Mumbai", [
-        "⚙️ Processed 1M+ daily transactions using SQL pipelines.",
-        "🔄 Automated reconciliation reducing effort by 30%.",
-        "📊 Built anomaly detection dashboards."
-    ])
-
-    card("Jio Platforms Ltd.", "Data Science Intern", "Jan 2022 – Jun 2022 | Mumbai", [
-        "🤖 Built computer vision models (88% accuracy).",
-        "📊 Analyzed telecom datasets for insights.",
-        "⚙️ Reduced preprocessing time by 40%."
+        "📊 Analyzed 500K+ event records for insights.",
+        "📈 Designed KPI frameworks for experimentation.",
+        "⚙️ Built ML pipelines integrating social APIs.",
+        "☁️ Used GCP Pub/Sub + Cloud Functions.",
+        "🧠 Applied LLM-based sentiment analytics."
     ])
 
 # -------------------- PROJECTS --------------------
 with tabs[2]:
     section_title("Projects & Research", "🚀")
 
-    card("🌊 Agentic AI Pipeline for Harmful Algal Bloom Detection", "Master’s Thesis", "2025", [
-        "🤖 Multi-agent system using LangGraph + LangChain.",
-        "🧠 RAG pipelines with evaluation (RAGAS).",
-        "📡 Satellite + climate data integration.",
-        "🔗 LLM reasoning workflows with OpenAI APIs.",
-        "⚙️ Modular ML pipelines for prediction."
+    card("🌊 Agentic AI Pipeline", "Master’s Thesis", "2025", [
+        "Multi-agent system using LangGraph + LangChain.",
+        "RAG pipelines with evaluation (RAGAS).",
+        "LLM reasoning workflows using OpenAI APIs."
     ])
-    pill(["LangGraph", "LangChain", "RAG", "RAGAS", "OpenAI"])
+    pill(["LangGraph", "LangChain", "RAG"])
 
-    card("⚙️ Modular ML Pipeline System", "Predictive Analytics", "2024", [
-        "Built reusable ML pipelines for classification & regression.",
-        "Automated preprocessing and feature engineering.",
-        "Improved model performance via structured workflows."
-    ])
-    pill(["Scikit-learn", "Pandas", "ML Pipelines"])
+# -------------------- 🧪 DEMO LAB --------------------
+with tabs[3]:
+    section_title("AI Demo Lab", "🧪")
+
+    # ---------- AI CHAT ----------
+    st.markdown("### 🤖 AI Assistant")
+    user_input = st.text_input("Ask about AI, ML, or pipelines:")
+
+    if user_input:
+        if "pipeline" in user_input.lower():
+            st.success("AI Response: Data pipelines automate ingestion → transformation → storage → analytics.")
+        elif "llm" in user_input.lower():
+            st.success("AI Response: LLMs use transformer architectures for contextual understanding.")
+        else:
+            st.success("AI Response: Demo assistant — connect OpenAI API for real responses.")
+
+    st.markdown("---")
+
+    # ---------- ML SIMULATOR ----------
+    st.markdown("### 📊 ML Prediction Simulator")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        temp = st.slider("Temperature (°C)", 0, 40, 25)
+        humidity = st.slider("Humidity (%)", 0, 100, 60)
+
+    with col2:
+        wind = st.slider("Wind Speed", 0, 50, 10)
+        pollution = st.slider("Pollution Index", 0, 300, 120)
+
+    score = (temp*0.3 + humidity*0.2 + wind*0.1 + pollution*0.4)
+
+    st.metric("Bloom Risk Score", round(score, 2))
+
+    if score > 150:
+        st.error("High Risk")
+    elif score > 80:
+        st.warning("Moderate Risk")
+    else:
+        st.success("Low Risk")
+
+    st.markdown("---")
+
+    # ---------- ANALYTICS ----------
+    st.markdown("### 📈 Real-Time Analytics")
+
+    import pandas as pd
+    import numpy as np
+
+    data = pd.DataFrame({
+        "Time": range(50),
+        "Sentiment": np.random.randn(50).cumsum(),
+        "Engagement": np.random.randint(50, 200, 50)
+    })
+
+    st.line_chart(data.set_index("Time"))
+    st.bar_chart(data["Engagement"])
+
+    st.info("Simulated real-time streaming analytics")
 
 # -------------------- SKILLS --------------------
-with tabs[3]:
-    section_title("Technical Skills", "🧠")
-
-    st.markdown("### 🤖 AI & Generative AI")
-    pill(["LangChain", "LangGraph", "RAG", "RAGAS", "OpenAI API", "NVIDIA NeMo", "MCP"])
-
-    st.markdown("### 💻 Programming")
-    pill(["Python", "SQL", "SAS", "TypeScript"])
-
-    st.markdown("### ⚙️ Data Engineering")
-    pill(["ETL Pipelines", "Airflow", "dbt", "FastAPI", "REST APIs", "GraphQL"])
-
-    st.markdown("### ☁️ Cloud & MLOps")
-    pill(["AWS", "GCP", "Azure", "Docker", "Kubernetes", "MLflow", "CI/CD"])
-
-    st.markdown("### 📊 Visualization")
-    pill(["Tableau", "Power BI", "Plotly", "Matplotlib", "D3.js"])
-
-    st.markdown("### 🧰 Tools")
-    pill(["Git", "Jira", "Confluence", "Terraform"])
+with tabs[4]:
+    section_title("Skills", "🧠")
+    pill(["Python", "SQL", "LangChain", "GCP", "AWS", "Docker"])
 
 # -------------------- EDUCATION --------------------
-with tabs[4]:
+with tabs[5]:
     section_title("Education", "🎓")
+    st.write("SRH Hochschule Heidelberg — M.Sc.")
 
-    card("🎓 SRH Hochschule Heidelberg", "M.Sc. Applied Data Science", "2023 – 2025", [
-        "Focus: ML, Data Engineering, Generative AI",
-        "Thesis: Agentic AI Pipeline using LangGraph"
-    ])
-
-    card("🏫 K.J. Somaiya College", "B.Tech Engineering", "2018 – 2022", [])
+# -------------------- CERTIFICATIONS --------------------
+with tabs[6]:
+    section_title("Certifications", "🏅")
+    st.write("Refer LinkedIn")
 
 # -------------------- CONTACT --------------------
-with tabs[5]:
-    section_title("Get in Touch", "📬")
-
-    st.markdown("""
-    📧 **ruchimanjalkar23@gmail.com**  
-    🔗 **LinkedIn:** https://linkedin.com/in/ruchi-manjalkar-360a97191  
-    💻 **GitHub:** https://github.com/ruchimanjalkar  
-    """)
+with tabs[7]:
+    section_title("Contact", "📬")
+    st.write("Email / LinkedIn / GitHub")
