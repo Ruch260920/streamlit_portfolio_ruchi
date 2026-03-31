@@ -118,7 +118,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="metric">
-        <h3>3+ Years</h3>
+        <h3>2+ Years</h3>
         <p>Experience</p>
     </div>
     """, unsafe_allow_html=True)
