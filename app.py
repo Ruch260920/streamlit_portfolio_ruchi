@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 
 # -------------------- PAGE CONFIG --------------------
 st.set_page_config(
-    page_title="Ruchi Manjalkar — Data Portfolio",
+    page_title="Ruchi Manjalkar — AI Portfolio",
     page_icon="💫",
     layout="wide"
 )
@@ -38,8 +38,8 @@ if os.path.exists("assets/ruchi.jpg"):
 
 st.sidebar.markdown("### 👩‍💻 Ruchi Manjalkar")
 st.sidebar.markdown("📍 Mannheim, Germany")
-st.sidebar.markdown("📧 [ruchi.manjalkar@gmail.com](mailto:ruchi.manjalkar@gmail.com)")
-st.sidebar.markdown("🔗 [LinkedIn](https://linkedin.com/in/ruchi-manjalkar)")
+st.sidebar.markdown("📧 ruchimanjalkar23@gmail.com")
+st.sidebar.markdown("🔗 [LinkedIn](https://linkedin.com/in/ruchi-manjalkar-360a97191)")
 st.sidebar.markdown("💻 [GitHub](https://github.com/ruchimanjalkar)")
 
 resume_path = "assets/resume.pdf"
@@ -58,13 +58,22 @@ lottie_data = load_lottie_url("https://assets9.lottiefiles.com/packages/lf20_jci
 st_lottie(lottie_data, height=220, key="header_anim")
 
 st.title("💫 Ruchi Manjalkar")
-st.subheader("Data Engineer • Data Scientist • AI Researcher")
-st.markdown("""
-> “Where data meets intelligence — building systems that not only analyze, but think.”  
+st.subheader("AI Engineer • Generative AI • Data Product Owner")
 
-I design intelligent data systems that combine analytics, automation, and agentic AI for real-world impact.  
-My expertise spans **data pipelines**, **ML modeling**, and **LLM-based agent systems** that make data adaptive, explainable, and scalable.
+st.markdown("""
+> “Building intelligent systems where data, models, and reasoning agents work together.”
+
+I am an **AI Engineer with 3+ years of experience** designing scalable data systems, machine learning pipelines, and generative AI applications.  
+
+- 🧠 LLM orchestration (**LangChain, LangGraph, RAG**)  
+- ⚙️ Production data systems (**ETL, SQL, APIs**)  
+- 📊 KPI-driven **data products & analytics**  
+- ☁️ Cloud ML systems (**GCP, AWS, Azure**)  
+
+I focus on building **end-to-end intelligent systems** that are scalable, explainable, and impactful.
 """)
+
+st.info("💡 Currently building production-ready AI systems combining data pipelines, LLM reasoning, and scalable cloud architecture.")
 
 st.markdown("---")
 
@@ -75,7 +84,6 @@ tabs = st.tabs([
     "🚀 Projects",
     "🧠 Skills",
     "🎓 Education",
-    "🏅 Certifications",
     "📬 Contact"
 ])
 
@@ -83,255 +91,107 @@ tabs = st.tabs([
 with tabs[0]:
     section_title("About Me", "👩‍💻")
     st.markdown("""
-    I'm a **Data Engineer and AI Researcher** passionate about transforming raw data into intelligent decisions.  
-    My background bridges **data engineering, machine learning, and generative AI**, with a focus on creating **Agentic AI frameworks** 
-    that orchestrate data, models, and reasoning agents autonomously.
+    I specialize in building **AI-driven data systems** that combine:
+    
+    - Data Engineering ⚙️  
+    - Machine Learning 📊  
+    - Generative AI 🤖  
 
-    - ⚙️ Experienced in **ETL pipelines**, **data orchestration**, and **cloud architecture (GCP/Azure)**.  
-    - 🤖 Researching **multi-agent orchestration using LangChain and event-driven systems**.  
-    - 🧩 Skilled in **Python, SQL, Airflow, Kafka**, and **containerized deployment with Docker**.  
-    - 📊 Passionate about **data visualization** (Power BI, Streamlit, Tableau).  
-    - 💬 Advocate for **Explainable & Responsible AI**.
+    My work focuses on **agentic AI systems**, where multiple intelligent components collaborate
+    to automate decisions, insights, and workflows.
+
+    I bring a strong mix of **engineering + product thinking**, enabling scalable and business-aligned AI systems.
     """)
 
 # -------------------- EXPERIENCE --------------------
 with tabs[1]:
     section_title("Professional Experience", "💼")
 
-    card("Omnisent AI", "AI Engineer Intern", "June 2025 – Sep 2025 | Remote", [
-        "🧩 Built **real-time ML pipelines** integrating Twitter & Reddit APIs using Kafka + Celery + PostgreSQL.",
-        "☁️ Automated ingestion using **GCP Pub/Sub + Cloud Functions** for sentiment analytics.",
-        "📈 Developed **Streamlit dashboards** for sports trend prediction (NBA, NFL).",
-        "🧠 Integrated **LangChain LLMs** for data summarization and sentiment anomaly detection."
+    card("e.Ray Europa GmbH", "AI Engineer / Data Product Owner", "Oct 2025 – Present | Heidelberg, Germany", [
+        "🚀 Designed analytics-ready datasets and semantic metric layers.",
+        "⚙️ Built Python + SQL ETL pipelines reducing manual work by 35%.",
+        "📊 Improved reporting efficiency by 20%.",
+        "🛡️ Implemented data quality monitoring reducing issues by 40%.",
+        "🤝 Defined KPIs and built scalable data products."
     ])
 
-    card("HDFC Bank", "Deputy Manager — Data Analytics & Reporting", "Jul 2022 – Oct 2023 | Mumbai, India", [
-        "📊 Automated financial reporting pipelines using **SQL, Power BI, and Python**.",
-        "🔍 Analyzed 10M+ digital transactions for performance and compliance KPIs.",
-        "🤝 Collaborated across business units to streamline analytics and report automation."
+    card("Omnisent AI", "Product & Analytics Intern", "Jun 2025 – Sep 2025 | Remote", [
+        "📊 Analyzed 500K+ event records for behavioral insights.",
+        "📈 Designed KPI frameworks for funnel analysis.",
+        "📊 Built Tableau dashboards reducing reporting effort by 25%."
     ])
 
-    card("Reliance Jio Infocomm", "Data Intern — Data Automation & Visualization", "Feb 2021 – Jun 2021 | Mumbai, India", [
-        "⚙️ Automated operational KPI reports using **Python + Excel VBA scripts**.",
-        "📉 Created **Tableau dashboards** improving executive decision visibility."
+    card("HDFC Bank", "Deputy Manager — Data Analytics", "Jul 2022 – Oct 2023 | Mumbai", [
+        "⚙️ Processed 1M+ daily transactions using SQL pipelines.",
+        "🔄 Automated reconciliation reducing effort by 30%.",
+        "📊 Built anomaly detection dashboards."
+    ])
+
+    card("Jio Platforms Ltd.", "Data Science Intern", "Jan 2022 – Jun 2022 | Mumbai", [
+        "🤖 Built computer vision models (88% accuracy).",
+        "📊 Analyzed telecom datasets for insights.",
+        "⚙️ Reduced preprocessing time by 40%."
     ])
 
 # -------------------- PROJECTS --------------------
 with tabs[2]:
     section_title("Projects & Research", "🚀")
 
-    # 1️⃣ AI-AGENTIC FRAMEWORK
-    card("🌊 AI-Agentic Framework for Harmful Algal Bloom Prediction", "Master’s Thesis — SRH Hochschule Heidelberg", "Jan 2025 – Sep 2025", [
-        "Developed a **multi-agent orchestration framework** integrating climate (ERA5), satellite (Sentinel-2), and in-situ (UBA) data.",
-        "Built **event-bus communication** between agents (Collect → Process → Predict → Visualize).",
-        "Used **LangChain** for inter-agent reasoning, enabling explainable coordination and decision flow.",
-        "Deployed predictive models (**XGBoost, SARIMA, LSTM**) with SHAP-based feature interpretability.",
-        "Hosted workflows on **GCP (BigQuery, Pub/Sub, Cloud Functions)** for scalable execution.",
-        "Created dynamic **Power BI dashboards** for temporal-spatial bloom predictions."
+    card("🌊 Agentic AI Pipeline for Harmful Algal Bloom Detection", "Master’s Thesis", "2025", [
+        "🤖 Multi-agent system using LangGraph + LangChain.",
+        "🧠 RAG pipelines with evaluation (RAGAS).",
+        "📡 Satellite + climate data integration.",
+        "🔗 LLM reasoning workflows with OpenAI APIs.",
+        "⚙️ Modular ML pipelines for prediction."
     ])
-    pill(["Python", "LangChain", "Event Bus", "GCP", "Airflow", "Power BI", "XGBoost", "LSTM", "SHAP"])
+    pill(["LangGraph", "LangChain", "RAG", "RAGAS", "OpenAI"])
 
-    # 2️⃣ OMNISENT SPORTS SENTIMENT PIPELINE
-    card("🏀 Omnisent Sports Sentiment Analytics", "Enterprise AI Pipeline", "Jan 2025 – Apr 2025", [
-        "Developed **real-time sentiment ingestion pipeline** for NBA & NFL events using Twitter + Reddit APIs.",
-        "Used **Kafka, Celery, and PostgreSQL** to manage streaming data workloads.",
-        "Implemented **LLM-based context summarization (LangChain)** for event-driven news classification.",
-        "Built **Streamlit dashboards** to visualize Pulse scores and sentiment anomalies."
+    card("⚙️ Modular ML Pipeline System", "Predictive Analytics", "2024", [
+        "Built reusable ML pipelines for classification & regression.",
+        "Automated preprocessing and feature engineering.",
+        "Improved model performance via structured workflows."
     ])
-    pill(["Kafka", "Celery", "Streamlit", "PostgreSQL", "LangChain", "Docker", "GCP"])
+    pill(["Scikit-learn", "Pandas", "ML Pipelines"])
 
-    # 3️⃣ SPEECH AI PROJECTS
-    card("🎙️ Speech Enhancement & Noise Reduction", "Deep Learning for Audio Clarity", "Jan 2024 – Mar 2024", [
-        "Trained a **CRNN model** to remove background noise from speech recordings using TensorFlow + Librosa.",
-        "Performed **spectrogram and MFCC-based feature extraction** for robust model performance.",
-        "Improved signal-to-noise ratio by 20%, validated on noisy datasets."
-    ])
-    pill(["TensorFlow", "CRNN", "Librosa", "MFCC", "Audio DSP"])
-
-    card("🗣️ Speech-to-Text Model Optimization", "Transformer Fine-tuning", "Nov 2024 – Jan 2025", [
-        "Fine-tuned **Wav2Vec2 & DeepSpeech** models to enhance transcription accuracy.",
-        "Applied **data augmentation** (pitch shift, time-stretch, speed variation) for generalization.",
-        "Achieved ~10% WER improvement on custom German-English dataset."
-    ])
-    pill(["PyTorch", "SpeechBrain", "Transformers", "Hugging Face", "Audio Augmentation"])
-
-    # 4️⃣ NLP / DATA AUTOMATION
-    card("🤖 Hush Hush Recruiter", "AI-Powered Recruitment Assistant", "Nov 2023 – Feb 2024", [
-        "Developed a **Flask-based web app** for GitHub candidate screening using clustering & NLP.",
-        "Reduced manual screening by 40%, improved talent-matching accuracy by 85%.",
-        "Used **Scikit-learn, BeautifulSoup, and Flask** for full pipeline automation."
-    ])
-    pill(["Flask", "Scikit-learn", "BeautifulSoup", "NLP", "Docker"])
-
-    # 5️⃣ VISUALIZATION & BI
-    card("📊 US FBI Crime Data Dashboard", "Data Visualization Project", "Oct 2024 – Nov 2024", [
-        "Designed Tableau dashboards to visualize **12% rise in hate crimes (2009–2019)** across states.",
-        "Mapped top categories by Race/Ethnicity and Location using LOD expressions.",
-        "Enabled interactive KPI filters for trend comparison and time analysis."
-    ])
-    pill(["Tableau", "SQL", "Python", "Data Visualization"])
-
-    # 6️⃣ ML & HEALTHCARE
-    card("🫁 LungDetect — Pneumonia Detection", "Deep Learning for Healthcare", "May 2023 – Dec 2023", [
-        "Developed **DenseNet121 CNN model** achieving 95% accuracy on chest X-ray dataset.",
-        "Integrated **Grad-CAM** explainability for clinical validation and model transparency.",
-        "Collaborated with healthcare mentors for model evaluation and interpretability."
-    ])
-    pill(["TensorFlow", "DenseNet121", "Grad-CAM", "Keras", "OpenCV"])
-
-# -------------------- SKILLS --------------------
 # -------------------- SKILLS --------------------
 with tabs[3]:
     section_title("Technical Skills", "🧠")
 
-    col1, col2, col3 = st.columns(3)
+    st.markdown("### 🤖 AI & Generative AI")
+    pill(["LangChain", "LangGraph", "RAG", "RAGAS", "OpenAI API", "NVIDIA NeMo", "MCP"])
 
-    # ------------------ COLUMN 1 ------------------
-    with col1:
-        st.markdown("#### 💻 Programming & Scripting")
-        pill(["Python", "SQL", "R", "Bash", "JavaScript (basic)"])
+    st.markdown("### 💻 Programming")
+    pill(["Python", "SQL", "SAS", "TypeScript"])
 
-        st.markdown("#### ⚙️ Data Engineering & Pipelines")
-        pill([
-            "Apache Airflow", "Kafka", "dbt", "ETL Pipelines",
-            "Apache Spark", "Dataflow", "Terraform", "Event-Driven Design"
-        ])
+    st.markdown("### ⚙️ Data Engineering")
+    pill(["ETL Pipelines", "Airflow", "dbt", "FastAPI", "REST APIs", "GraphQL"])
 
-        st.markdown("#### 🤖 Agentic & Generative AI")
-        pill([
-            "LangChain", "OpenAI API", "LlamaIndex", "CrewAI",
-            "Multi-Agent Orchestration", "Event Bus Architecture",
-            "Retrieval-Augmented Generation (RAG)", "Vector Databases (FAISS / Chroma)",
-            "Prompt Engineering", "Tool Integration & Memory Chains"
-        ])
+    st.markdown("### ☁️ Cloud & MLOps")
+    pill(["AWS", "GCP", "Azure", "Docker", "Kubernetes", "MLflow", "CI/CD"])
 
-    # ------------------ COLUMN 2 ------------------
-    with col2:
-        st.markdown("#### ☁️ Cloud & DevOps")
-        pill([
-            "Google Cloud Platform (GCP)", "Azure", "AWS (S3, EC2)",
-            "BigQuery", "Pub/Sub", "Docker", "Kubernetes",
-            "GitHub Actions", "CI/CD", "Linux Server Management"
-        ])
+    st.markdown("### 📊 Visualization")
+    pill(["Tableau", "Power BI", "Plotly", "Matplotlib", "D3.js"])
 
-        st.markdown("#### 📊 Visualization & BI")
-        pill([
-            "Power BI", "Tableau", "Streamlit", "Looker Studio",
-            "Matplotlib", "Seaborn", "Plotly", "Altair"
-        ])
-
-        st.markdown("#### 🧩 Databases & Storage")
-        pill([
-            "PostgreSQL", "MySQL", "MongoDB", "BigQuery",
-            "SQLite", "ElasticSearch", "Snowflake", "Cloud Storage Buckets"
-        ])
-
-    # ------------------ COLUMN 3 ------------------
-    with col3:
-        st.markdown("#### 🤖 Machine & Deep Learning")
-        pill([
-            "Scikit-learn", "TensorFlow", "PyTorch",
-            "XGBoost", "LightGBM", "LSTM / RNNs",
-            "Transformers (Hugging Face)", "Computer Vision (CNN, Grad-CAM)",
-            "Model Explainability (SHAP, LIME)"
-        ])
-
-        st.markdown("#### 🧠 NLP & LLM Ecosystem")
-        pill([
-            "Hugging Face Transformers", "Tokenization / Embeddings",
-            "Sentence-Transformers", "Text Summarization / QnA Pipelines",
-            "LLM Fine-Tuning", "LangSmith Tracing", "Prompt Templates"
-        ])
-
-        st.markdown("#### 🧰 Tools, Collaboration & Analytics")
-        pill([
-            "Excel VBA", "Git / GitHub", "Jira", "Confluence",
-            "Notion", "Miro", "Slack Automation", "API Testing (Postman)"
-        ])
-
+    st.markdown("### 🧰 Tools")
+    pill(["Git", "Jira", "Confluence", "Terraform"])
 
 # -------------------- EDUCATION --------------------
 with tabs[4]:
     section_title("Education", "🎓")
 
-    card("🎓 SRH Hochschule Heidelberg", "M.Sc. in Applied Data Science & Analytics", "Oct 2023 – Nov 2025 | Germany", [
-        "Specialization: Cloud Engineering, Machine Learning, and Agentic AI Systems.",
-        "Thesis: AI-Agentic Framework integrating Event Bus, LangChain, and GCP microservices."
+    card("🎓 SRH Hochschule Heidelberg", "M.Sc. Applied Data Science", "2023 – 2025", [
+        "Focus: ML, Data Engineering, Generative AI",
+        "Thesis: Agentic AI Pipeline using LangGraph"
     ])
 
-    card("🏫 K.J. Somaiya College of Engineering", "B.E. in Electronics Engineering", "Aug 2018 – May 2022 | India", [
-        "Capstone Project: Pneumonia Detection using DenseNet121 CNN with Grad-CAM.",
-        "Focused coursework in DSP, Machine Learning, and Embedded Systems."
-    ])
-
-# -------------------- CERTIFICATIONS --------------------
-with tabs[5]:
-    section_title("Professional Certifications", "🏅")
-    st.markdown("""
-    - 🎓 **IBM Data Science Professional Certificate** — Coursera (2023)  
-      *Python for Data Science, SQL, Visualization, and Applied Capstone.*  
-
-    - 🤖 **Machine Learning A–Z: Hands-On Python & R** — Udemy (2023)  
-      *Practical ML workflows using scikit-learn and R-based analytics.*  
-
-    - 📊 **Microsoft Power BI Desktop for Business Intelligence** — Udemy (2024)  
-      *Data modeling, DAX, and performance-tuned dashboards.*  
-
-    - 🧠 **Fundamentals of Deep Learning** — NVIDIA (2024)  
-      *CNNs, RNNs, and GPU-accelerated DL optimization.*  
-
-    - 🧩 **LangChain for LLM Applications** — LangChain Academy (2024)  
-      *Building modular AI agents, prompt orchestration, and reasoning pipelines.*  
-
-    - ☁️ **Google Cloud Data Engineer Associate** — Google Cloud (2024)  
-      *Designed & deployed pipelines with Pub/Sub, BigQuery, and Dataflow.*  
-
-    - 🐳 **Docker Masterclass for Data Science** — Udemy (2024)  
-      *Containerized ML environments for reproducible pipelines.*  
-
-    - 💬 **Generative AI Masterclass** — Udemy (2024)  
-      *Built LLM-based apps using OpenAI APIs & LangChain integrations.*  
-
-    - 🪄 **Advanced Prompt Engineering & RAG Systems** — Deeplearning.ai (2025)  
-      *Designed retrieval-augmented generation pipelines with FAISS and OpenAI APIs.*  
-
-    - 📈 **Exploring SAP Analytics Cloud** — SAP Learning Hub (2024)  
-      *Created predictive data stories, dashboards, and business KPIs in SAC.*  
-    """)
+    card("🏫 K.J. Somaiya College", "B.Tech Engineering", "2018 – 2022", [])
 
 # -------------------- CONTACT --------------------
-with tabs[6]:
+with tabs[5]:
     section_title("Get in Touch", "📬")
+
     st.markdown("""
-    I’d love to connect!  
-    Whether you’re interested in AI agent frameworks, data engineering solutions, or ML visualization — drop me a message below.
+    📧 **ruchimanjalkar23@gmail.com**  
+    🔗 **LinkedIn:** https://linkedin.com/in/ruchi-manjalkar-360a97191  
+    💻 **GitHub:** https://github.com/ruchimanjalkar  
     """)
-
-    st.markdown("""
-    <form id="contactForm" action="https://formsubmit.co/ruchi.manjalkar@gmail.com" method="POST" onsubmit="showMessage()">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-
-    <script>
-        function showMessage() {alert('✅ Your message has been sent successfully!');}
-    </script>
-
-    <style>
-        form {display:flex;flex-direction:column;gap:10px;width:100%;max-width:500px;}
-        input, textarea {
-            padding:10px;border-radius:8px;border:none;
-            background:#171A21;color:#F1F5F9;font-size:15px;
-        }
-        textarea {height:120px;resize:none;}
-        button {
-            background:#0078D7;color:white;border:none;padding:10px;
-            border-radius:8px;font-size:16px;font-weight:bold;
-            transition:0.3s;
-        }
-        button:hover {background:#005fa3;cursor:pointer;}
-    </style>
-    """, unsafe_allow_html=True)
