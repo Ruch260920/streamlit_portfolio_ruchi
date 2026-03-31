@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(__file__))
+
 import streamlit as st
 from data_ruchi import CLOUD_AI
 from components import section_title, card, pill
