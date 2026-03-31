@@ -1,138 +1,145 @@
-import streamlit as st
-
-def section_title(title, icon=""):
-    st.markdown(f"""
-    <h2 style='margin-top:40px;'>{icon} {title}</h2>
-    """, unsafe_allow_html=True)
-
-
-def card(title, subtitle, meta, bullets):
-    st.markdown(f"""
-    <div style="
-        background-color:#0f172a;
-        padding:20px;
-        border-radius:12px;
-        margin-bottom:20px;
-        border:1px solid #1e293b;
-    ">
-        <h3>{title}</h3>
-        <p style="color:#9CA3AF;">{subtitle}</p>
-        <p style="color:#6B7280; font-size:13px;">{meta}</p>
-    """, unsafe_allow_html=True)
-
-    for b in bullets:
-        st.markdown(f"- {b}")
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-def pill(items):
-    html = ""
-    for i in items:
-        html += f"<span style='background:#2563EB;padding:6px 12px;margin:4px;border-radius:20px;font-size:12px'>{i}</span>"
-    st.markdown(html, unsafe_allow_html=True)
-
-
 CLOUD_AI = {
     "name": "Ruchi Manjalkar",
     "title": "AI Engineer • Generative AI • Data Product Owner",
-    "location": "Mannheim, Germany",
+    "summary": (
+        "AI Engineer with 3+ years of experience building scalable ML pipelines, "
+        "data platforms, and generative AI systems using LangChain, RAG, and cloud technologies."
+    ),
+
     "email": "ruchimanjalkar23@gmail.com",
     "linkedin": "https://linkedin.com/in/ruchi-manjalkar-360a97191",
     "github": "https://github.com/ruchimanjalkar",
 
-    "summary": (
-        "AI Engineer with 2+ years of experience building ML pipelines, data platforms, "
-        "and generative AI systems using LangChain, RAG, and cloud technologies."
-    ),
-
+    # -------- SKILLS --------
     "skills": {
-        "Programming": "Python, SQL, SAS",
-        "AI/GenAI": "LangChain, LangGraph, RAG, OpenAI API",
-        "Machine Learning": "Scikit-learn, TensorFlow, XGBoost",
-        "Data Engineering": "ETL Pipelines, FastAPI, Airflow, dbt",
-        "Cloud": "AWS, GCP, Azure",
-        "Visualization": "Power BI, Tableau, Streamlit",
+        "Programming": "Python, SQL, SAS, TypeScript",
+        "AI & GenAI": "LangChain, LangGraph, RAG, RAGAS, OpenAI API, NVIDIA NeMo",
+        "Machine Learning": "Scikit-learn, TensorFlow, PyTorch, XGBoost, NLP",
+        "Data Engineering": "ETL Pipelines, Airflow, dbt, FastAPI, REST APIs, Kafka, Redis",
+        "Cloud & MLOps": "AWS, GCP, Azure, Docker, Kubernetes, MLflow, CI/CD",
+        "Visualization": "Power BI, Tableau, Plotly, Matplotlib",
+        "Databases": "PostgreSQL, MySQL, BigQuery, MongoDB",
+        "Tools": "Git, Jira, Confluence, Terraform"
     },
 
+    # -------- EXPERIENCE --------
     "experience": [
         {
             "company": "e.Ray Europa GmbH",
             "role": "AI Engineer / Data Product Owner",
             "period": "Oct 2025 – Present",
             "bullets": [
-                "Designed analytics-ready datasets supporting ML workflows.",
-                "Built ETL pipelines reducing manual effort by 35%.",
-                "Improved reporting efficiency by 20%.",
-                "Implemented data quality monitoring reducing incidents by 40%.",
-                "Defined KPIs and built scalable data products."
-            ],
+                "Architected analytics-ready datasets and semantic metric layers for ML workflows",
+                "Built scalable ETL pipelines using Python and SQL reducing manual effort by 35%",
+                "Improved reporting efficiency by 20% via optimized transformation logic",
+                "Implemented data quality monitoring systems reducing issues by 40%",
+                "Collaborated with stakeholders to define KPIs and data products",
+                "Designed cloud-based data architectures for scalable analytics"
+            ]
         },
         {
-            "company": "Omnisent Sports",
+            "company": "Omnisent AI",
             "role": "Data Science Intern",
             "period": "Jun 2025 – Sep 2025",
             "bullets": [
-                "Built real-time sentiment pipelines using Twitter/X and Reddit.",
-                "Developed data ingestion using Celery, Redis, PostgreSQL.",
-                "Applied NLP models for sentiment and topic analysis.",
-                "Created dashboards in Streamlit and Power BI."
-            ],
+                "Developed real-time sentiment analysis pipelines using Twitter/X and Reddit data",
+                "Built data ingestion pipelines using Celery, Redis, PostgreSQL",
+                "Applied NLP models (Transformers, sentiment models, topic modeling)",
+                "Designed ETL workflows for streaming data pipelines",
+                "Created Streamlit and Power BI dashboards for real-time insights",
+                "Performed model validation and benchmarking for ML systems"
+            ]
         },
         {
             "company": "HDFC Bank",
             "role": "Deputy Manager — Data Analytics",
             "period": "Jul 2022 – Oct 2023",
             "bullets": [
-                "Processed 1M+ daily transactions using SQL pipelines.",
-                "Automated reconciliation reducing effort by 30%.",
-                "Built anomaly detection dashboards."
-            ],
+                "Developed SQL pipelines processing 1M+ daily financial transactions",
+                "Automated reconciliation pipelines reducing manual work by 30%",
+                "Built anomaly detection dashboards for fraud monitoring",
+                "Standardized reporting improving audit readiness",
+                "Optimized loan management systems using data engineering"
+            ]
         },
+        {
+            "company": "Jio Platforms Ltd.",
+            "role": "Data Science Intern",
+            "period": "Jan 2022 – Jun 2022",
+            "bullets": [
+                "Developed computer vision models achieving 88% accuracy",
+                "Analyzed telecom datasets for behavioral insights",
+                "Reduced preprocessing time by 40% via reusable pipelines",
+                "Worked on image processing using OpenCV"
+            ]
+        }
     ],
 
+    # -------- PROJECTS --------
     "projects": [
         {
             "name": "Agentic AI Pipeline for Harmful Algal Bloom Detection",
             "bullets": [
-                "Designed multi-agent system using LangGraph + LangChain.",
-                "Built RAG pipelines with evaluation (RAGAS).",
-                "Integrated satellite and climate datasets.",
-                "Implemented LLM reasoning workflows."
+                "Designed multi-agent AI system using LangGraph and LangChain",
+                "Implemented RAG pipelines with evaluation using RAGAS",
+                "Integrated satellite (Sentinel-2) and climate (ERA5) data",
+                "Built ML models for anomaly detection and forecasting",
+                "Implemented LLM reasoning workflows using OpenAI APIs"
             ],
-            "tags": ["LangGraph", "RAG", "GCP"],
+            "tags": ["LangGraph", "LangChain", "RAG", "RAGAS", "OpenAI", "GCP"]
         },
         {
-            "name": "Industrial Anomaly Detection (RENOLIT)",
+            "name": "Real-Time Sentiment Analytics Pipeline",
             "bullets": [
-                "Built VAE model for anomaly detection in production lines.",
-                "Detected deviations in sensor data improving quality.",
-                "Reduced production losses via early detection.",
-                "Developed real-time Streamlit dashboard."
+                "Built streaming pipelines using Kafka, Celery, Redis",
+                "Processed real-time Twitter and Reddit data",
+                "Applied NLP models for sentiment classification",
+                "Developed dashboards for KPI tracking"
             ],
-            "tags": ["VAE", "Deep Learning"],
+            "tags": ["Kafka", "Redis", "NLP", "Streamlit"]
         },
         {
-            "name": "ML Pipeline Development & Predictive Analytics",
+            "name": "Anomaly Detection System (VAE)",
             "bullets": [
-                "Built modular ML pipelines for classification and regression.",
-                "Automated preprocessing and feature engineering.",
-                "Improved model performance using structured workflows."
+                "Developed Variational Autoencoder for anomaly detection",
+                "Processed sensor data from industrial systems",
+                "Built Streamlit dashboard for monitoring",
+                "Improved production quality and reduced losses"
             ],
-            "tags": ["ML Pipelines", "Scikit-learn"],
+            "tags": ["Deep Learning", "VAE", "Streamlit"]
         },
+        {
+            "name": "Modular ML Pipeline System",
+            "bullets": [
+                "Built reusable ML pipelines for classification and regression",
+                "Automated feature engineering and preprocessing",
+                "Improved model performance using structured workflows"
+            ],
+            "tags": ["Scikit-learn", "Pandas"]
+        }
     ],
 
+    # -------- EDUCATION --------
     "education": [
         {
             "school": "SRH Hochschule Heidelberg",
             "degree": "M.Sc. Applied Data Science & Analytics",
-            "period": "2023 – 2025",
+            "period": "2023 – 2025"
         },
         {
             "school": "K.J. Somaiya College of Engineering",
             "degree": "B.Tech Electronics Engineering",
-            "period": "2018 – 2022",
-        },
+            "period": "2018 – 2022"
+        }
     ],
+
+    # -------- CERTIFICATIONS --------
+    "certifications": [
+        "IBM Data Science Professional Certificate",
+        "Fundamentals of Deep Learning — NVIDIA",
+        "Machine Learning A-Z",
+        "Docker Masterclass",
+        "Prompt Engineering for LLMs",
+        "Python Data Structures"
+    ]
 }
