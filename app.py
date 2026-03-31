@@ -4,7 +4,11 @@ sys.path.append(os.path.dirname(__file__))
 
 import streamlit as st
 from data_ruchi import CLOUD_AI
-from components import section_title, card, pill
+import components
+
+section_title = components.section_title
+card = components.card
+pill = components.pill
 
 st.set_page_config(layout="wide")
 
