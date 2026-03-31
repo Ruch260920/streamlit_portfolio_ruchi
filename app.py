@@ -11,6 +11,7 @@ st.set_page_config(layout="wide")
 
 data = CLOUD_AI
 
+
 # ---------- HERO ----------
 st.title(data["name"])
 st.subheader(data["title"])
