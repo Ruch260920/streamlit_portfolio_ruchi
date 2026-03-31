@@ -3,7 +3,7 @@ CLOUD_AI = {
     "title": "AI Engineer • Generative AI • Data Product Owner",
 
     "summary": (
-        "AI Engineer with 3+ years of experience building scalable ML pipelines, "
+        "AI Engineer with 2+ years of experience building scalable ML pipelines, "
         "data platforms, and generative AI systems using LangChain, RAG, and cloud technologies. "
         "Focused on delivering intelligent data products combining analytics, automation, and AI."
     ),
